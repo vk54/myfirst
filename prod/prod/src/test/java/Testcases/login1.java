@@ -34,9 +34,9 @@ public class login1 extends browser {
 		FileInputStream fis=new FileInputStream("C:\\Users\\vk982_000\\Downloads\\prod\\prod\\globalvalues.properities");
 		prop.load(fis);
 		
-	/*	browser B= new browser();
+		browser B= new browser();
 		B.browse();
-		System.out.println("sample");*/
+		System.out.println("sample");
 		driver.findElement(By.id("txtUserName")).sendKeys("testall");
 		
 		/*Login_PF log= new Login_PF(driver);
