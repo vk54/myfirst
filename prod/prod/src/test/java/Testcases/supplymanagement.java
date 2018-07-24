@@ -1,27 +1,31 @@
 package Testcases;
 
 import java.awt.AWTException;
+import java.io.IOException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
+import Base.browser;
 import OR.objectRepository;
 import PageFactory.SupplyMgt_PF;
 import ReUsable.Login;
 import ReUsable.SupplyMgt_RU;
 import ReUsable.hambutton;
-
-public class supplymanagement  {
-
-	public static void main(String[] args) throws InterruptedException, AWTException   {
+ 
+public class supplymanagement extends browser  {
+	WebDriver driver;
+	@Test
+	public  void supply_tc() throws IOException, InterruptedException, AWTException   {
 		// TODO Auto-generated method stub
-		WebDriver driver=new ChromeDriver();
-		driver.get("http://lynkuat.lynk.co.in/gandalfqa/Login.aspx");
-	//	login log=new login(driver);
-	//	login lg= new login();
+		driver=browse();
 	
-	    Login log=new Login(driver,"testall@lynk.co.in","password12*");
+	
+	  
+		login1 log=new login1();
+		log.login(driver);
 	    hambutton ham= new hambutton(driver);
 		Thread.sleep(5000);
 		ham.button().click();

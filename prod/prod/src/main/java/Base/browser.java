@@ -19,7 +19,7 @@ public class browser{
 	 public WebDriver driver=null;
 	
 	@Test
-	public void browse() throws IOException {
+	public WebDriver browse() throws IOException {
 		
 		Properties prop=new Properties();
 		FileInputStream fis=new FileInputStream("C:\\Users\\vk982_000\\Downloads\\prod\\prod\\globalvalues.properities");
@@ -33,6 +33,7 @@ public class browser{
 			WebDriver driver=new FirefoxDriver();
 		}
 		 driver.get(prop.getProperty("url"));
+		 return driver;
 		
 	}
 	

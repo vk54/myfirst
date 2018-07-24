@@ -19,30 +19,15 @@ import ReUsable.hambutton;
 public class login1 extends browser {
 	WebDriver driver;
 	@Test
-	public void login() throws InterruptedException, IOException {
+	public void login(WebDriver driver) throws InterruptedException, IOException {
 
-		/*System.setProperty("webdriver.chrome.driver", "C:\\Users\\vk982_000\\Downloads\\chromedriver_win32\\chromedriver.exe");
-		WebDriver driver=new ChromeDriver();
-		/*driver.get("http://lynkuat.lynk.co.in/gandalfqa/");
-		driver.manage().window().maximize();
-		Login_PF loginpage=new Login_PF(driver);
-		loginpage.username().sendKeys("testall@lynk.co.in");
-		loginpage.password().sendKeys("password12*");
-		loginpage.loginbutton().click();*/
-		//this. driver=driver;
+		
+		
 		Properties prop=new Properties();
 		FileInputStream fis=new FileInputStream("C:\\Users\\vk982_000\\Downloads\\prod\\prod\\globalvalues.properities");
 		prop.load(fis);
 		
-		browser B= new browser();
-		B.browse();
-		System.out.println("sample");
-		driver.findElement(By.id("txtUserName")).sendKeys("testall");
-		
-		/*Login_PF log= new Login_PF(driver);
-		log.username().sendKeys(prop.getProperty("username"));
-		log.password().sendKeys(prop.getProperty("password"));
-		log.loginbutton().click();*/
+		driver=browse();
 		
 		Login log=new Login(driver, prop.getProperty("username"), (prop.getProperty("password")));
 		
