@@ -17,17 +17,17 @@ import ReUsable.SupplyMgt_RU;
 import ReUsable.hambutton;
 
 public class login1 extends browser {
-	WebDriver driver;
+	//WebDriver driver;
 	@Test
-	public void login(WebDriver driver) throws InterruptedException, IOException {
+	public void login() throws InterruptedException, IOException {
 
 		
 		
 		Properties prop=new Properties();
-		FileInputStream fis=new FileInputStream("C:\\Users\\vk982_000\\Downloads\\prod\\prod\\globalvalues.properities");
+		FileInputStream fis=new FileInputStream("D:\\myfirst-master\\prod\\prod\\globalvalues.properities");
 		prop.load(fis);
 		
-		driver=browse();
+		//driver=browse();
 		
 		Login log=new Login(driver, prop.getProperty("username"), (prop.getProperty("password")));
 		

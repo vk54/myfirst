@@ -1,7 +1,9 @@
 package Testcases;
 
 import java.awt.AWTException;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Properties;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -16,16 +18,19 @@ import ReUsable.SupplyMgt_RU;
 import ReUsable.hambutton;
  
 public class supplymanagement extends browser  {
-	WebDriver driver;
+	//WebDriver driver;
 	@Test
 	public  void supply_tc() throws IOException, InterruptedException, AWTException   {
 		// TODO Auto-generated method stub
-		driver=browse();
+		//driver=browse();
 	
-	
-	  
-		login1 log=new login1();
-		log.login(driver);
+		
+		Properties prop=new Properties();
+		FileInputStream fis=new FileInputStream("D:\\myfirst-master\\prod\\prod\\globalvalues.properities");
+		prop.load(fis);
+		Login log=new Login(driver, prop.getProperty("username"), (prop.getProperty("password")));
+		
+
 	    hambutton ham= new hambutton(driver);
 		Thread.sleep(5000);
 		ham.button().click();

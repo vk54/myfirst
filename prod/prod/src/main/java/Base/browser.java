@@ -12,28 +12,29 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class browser{
 	//WebDriver driverObj;
 	 public WebDriver driver=null;
 	
-	@Test
-	public WebDriver browse() throws IOException {
+	@BeforeTest
+	public void browse() throws IOException {
 		
 		Properties prop=new Properties();
-		FileInputStream fis=new FileInputStream("C:\\Users\\vk982_000\\Downloads\\prod\\prod\\globalvalues.properities");
+		FileInputStream fis=new FileInputStream("D:\\myfirst-master\\prod\\prod\\globalvalues.properities");
 		prop.load(fis);
 		if(prop.getProperty("browser").contains("chrome"))
 		{		
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\vk982_000\\Downloads\\chromedriver_win32\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "E:\\\\chromedriver_win32\\\\chromedriver.exe");
 		driver=new ChromeDriver();
 		}
 		else {
 			WebDriver driver=new FirefoxDriver();
 		}
 		 driver.get(prop.getProperty("url"));
-		 return driver;
+		// return driver;
 		
 	}
 	
