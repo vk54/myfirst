@@ -6,9 +6,9 @@ import PageFactory.Login_PF;
 
 public class Login {
 	
-	WebDriver driver;
+	//WebDriver driver;
 	public Login(WebDriver driver, String username,String password) {
-	this. driver=driver;
+	//this. driver=driver;
 	Login_PF loginpage=new Login_PF(driver);
 	loginpage.username().sendKeys(username);
 	loginpage.password().sendKeys(password);

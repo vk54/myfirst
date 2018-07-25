@@ -23,7 +23,7 @@ public class browser{
 	public void browse() throws IOException {
 		
 		Properties prop=new Properties();
-		FileInputStream fis=new FileInputStream("D:\\myfirst-master\\prod\\prod\\globalvalues.properities");
+		FileInputStream fis=new FileInputStream("D:\\gitlab\\myfirst\\prod\\prod\\globalvalues.properities");
 		prop.load(fis);
 		if(prop.getProperty("browser").contains("chrome"))
 		{		
