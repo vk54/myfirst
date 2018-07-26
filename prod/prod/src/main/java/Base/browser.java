@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Properties;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -33,6 +34,7 @@ public class browser{
 		else {
 			WebDriver driver=new FirefoxDriver();
 		}
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		 driver.get(prop.getProperty("url"));
 		// return driver;
 		
