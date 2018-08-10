@@ -13,9 +13,9 @@ import org.openqa.selenium.support.ui.Select;
 import PageFactory.SupplyMgt_PF;
 
 public class SupplyMgt_RU {
-  WebDriver driver;
+ // WebDriver driver;
 	public void Personal(WebDriver driver) throws InterruptedException, AWTException {
-		this.driver=driver;
+		//this.driver=driver;
 		SupplyMgt_PF supply=new SupplyMgt_PF(driver);
 		supply.supplymenu().click();
 		Thread.sleep(3000);
@@ -54,7 +54,7 @@ public class SupplyMgt_RU {
 	}
 	
 	public void  Vehicledetail(WebDriver driver) {
-		this.driver=driver;
+		//this.driver=driver;
 		SupplyMgt_PF supply=new SupplyMgt_PF(driver);
 		supply.vehiclemenu().click();
 		supply.regno().sendKeys("tn12as1234");
@@ -74,7 +74,7 @@ public class SupplyMgt_RU {
 		
 	}
 	public void bankdetail(WebDriver driver) {
-		this.driver=driver;
+		//this.driver=driver;
 		SupplyMgt_PF supply=new SupplyMgt_PF(driver);
 		supply.bankname().click();
 		supply.banknameselection().click();

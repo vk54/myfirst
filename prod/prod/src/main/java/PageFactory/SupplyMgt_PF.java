@@ -10,9 +10,9 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 public class SupplyMgt_PF {
-	WebDriver driver;
+	//WebDriver driver;
 	public SupplyMgt_PF(WebDriver driver) {
-		this.driver=driver;
+		//this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
 	@FindBy(xpath="//div[@id='menusupplymanagement']")

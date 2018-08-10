@@ -24,7 +24,7 @@ public class login1 extends browser {
 		
 		
 		Properties prop=new Properties();
-		FileInputStream fis=new FileInputStream("D:\\myfirst-master\\prod\\prod\\globalvalues.properities");
+		FileInputStream fis=new FileInputStream("D:\\gitlab\\myfirst\\prod\\prod\\globalvalues.properities");
 		prop.load(fis);
 		
 		//driver=browse();

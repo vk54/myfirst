@@ -6,9 +6,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class Login_PF {
-	WebDriver driver;
+	//WebDriver driver;
 	public Login_PF(WebDriver driver) {
-		this.driver=driver;
+		//this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
 	@FindBy(xpath ="//input[@id='txtUserName']")

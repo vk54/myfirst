@@ -39,11 +39,11 @@ public class supplymanagement extends browser  {
 	    Robot robot = new Robot();
 		robot.keyPress(KeyEvent.VK_PAGE_DOWN);
 		robot.keyRelease(KeyEvent.VK_PAGE_DOWN);
-	    total_Availability TA=new total_Availability();
+	/*    total_Availability TA=new total_Availability();
 	    System.out.println("total availability");
 	    TA.total_AvailabilityTC(driver);
 		Thread.sleep(5000);
-		
+		*/
 		//SupplyMgt_PF supply= new SupplyMgt_PF(driver);
 		SupplyMgt_RU supply1=new SupplyMgt_RU();
 		supply1.Personal(driver);
